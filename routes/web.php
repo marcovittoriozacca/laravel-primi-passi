@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+
+    $data = [
+        [
+            "name" => "Alessandra",
+            "lastname" => "Rossi",
+            "location" => "New York City, USA"
+        ],
+        [
+            "name" => "Matteo",
+            "lastname" => "Bianchi",
+            "location" => "Tokyo, Giappone"
+        ],
+        [
+            "name" => "Sofia",
+            "lastname" => "Esposito",
+            "location" => "Londra, Regno Unito"
+        ],
+        [
+            "name" => "Giovanni",
+            "lastname" => "Romano",
+            "location" => "Sydney, Australia"
+        ],
+    ];
+
+    return view('home', compact('data'));
 });

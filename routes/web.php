@@ -40,3 +40,8 @@ Route::get('/', function () {
 
     return view('home', compact('data'));
 });
+
+
+Route::get('altpage', function () {
+    return view('altpage');
+});
